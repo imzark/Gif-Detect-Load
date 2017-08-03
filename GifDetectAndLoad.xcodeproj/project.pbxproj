@@ -16,6 +16,7 @@
 		58957BF91F321F1E009199F0 /* GifDetectAndLoadTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 58957BF81F321F1E009199F0 /* GifDetectAndLoadTests.m */; };
 		58957C041F321F1E009199F0 /* GifDetectAndLoadUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 58957C031F321F1E009199F0 /* GifDetectAndLoadUITests.m */; };
 		58DDF5241F323016005AE47C /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58DDF5231F323016005AE47C /* TableViewController.m */; };
+		58DDF5271F32C703005AE47C /* gifDisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58DDF5261F32C703005AE47C /* gifDisplayViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		58957C051F321F1E009199F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58DDF5221F323016005AE47C /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		58DDF5231F323016005AE47C /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		58DDF5251F32C703005AE47C /* gifDisplayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gifDisplayViewController.h; sourceTree = "<group>"; };
+		58DDF5261F32C703005AE47C /* gifDisplayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gifDisplayViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 				58957BE51F321F1E009199F0 /* ViewController.m */,
 				58DDF5221F323016005AE47C /* TableViewController.h */,
 				58DDF5231F323016005AE47C /* TableViewController.m */,
+				58DDF5251F32C703005AE47C /* gifDisplayViewController.h */,
+				58DDF5261F32C703005AE47C /* gifDisplayViewController.m */,
 				58957BE71F321F1E009199F0 /* Main.storyboard */,
 				58957BEA1F321F1E009199F0 /* Assets.xcassets */,
 				58957BEC1F321F1E009199F0 /* LaunchScreen.storyboard */,
@@ -283,6 +288,7 @@
 			files = (
 				58957BE61F321F1E009199F0 /* ViewController.m in Sources */,
 				58957BE31F321F1E009199F0 /* AppDelegate.m in Sources */,
+				58DDF5271F32C703005AE47C /* gifDisplayViewController.m in Sources */,
 				58957BE01F321F1E009199F0 /* main.m in Sources */,
 				58DDF5241F323016005AE47C /* TableViewController.m in Sources */,
 			);

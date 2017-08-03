@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import <Photos/Photos.h>
 #import "TableViewController.h"
+#import "gifDisplayViewController.h"
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -89,14 +90,22 @@
         option.version = PHImageRequestOptionsVersionOriginal;  // important
     
         [[PHCachingImageManager defaultManager] requestImageDataForAsset:self.gifAssetsArr[indexPath.row] options:option resultHandler:^(NSData * _Nullable imageData, NSString * _Nullable dataUTI, UIImageOrientation orientation, NSDictionary * _Nullable info) {
+
+            // 推向 tableView
+//            if (imageData) {
+//                TableViewController *vc = [[TableViewController alloc] init];
+//                NSMutableArray *array = [NSMutableArray array];
+//                for (NSString *key in info.allKeys) {
+//                    NSDictionary *dict = @{key: [info valueForKey:key]};
+//                    [array addObject:dict];
+//                }
+//                vc.assetDetail = array;
+//                [self.navigationController pushViewController:vc animated:YES];
+            
+            // 推向 imageView
             if (imageData) {
-                TableViewController *vc = [[TableViewController alloc] init];
-                NSMutableArray *array = [NSMutableArray array];
-                for (NSString *key in info.allKeys) {
-                    NSDictionary *dict = @{key: [info valueForKey:key]};
-                    [array addObject:dict];
-                }
-                vc.assetDetail = array;
+                gifDisplayViewController *vc = [[gifDisplayViewController alloc] init];
+                vc.gifData = imageData;
                 [self.navigationController pushViewController:vc animated:YES];
             } else {
                 UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"未知错误发生了！" message:@"没有获取到 NSData" preferredStyle:UIAlertControllerStyleAlert];
